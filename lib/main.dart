@@ -84,7 +84,7 @@ class _MyAppState extends State<MyApp> {
   }
 
   void _getCurrentLocation() async {
-    Position position = await Accelerometer.getCurrentPosition(
+    Position position = await Geolocator.getCurrentPosition(
         desiredAccuracy: LocationAccuracy.best,
         timeLimit: Duration(seconds: 5));
     _addPosition(position);
